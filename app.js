@@ -58,13 +58,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     //função para fazer o get na API que resgata os dados
     window.fetchAndUpdateData = function() {
+        
         //aqui deve ser implementada a função de recebimento dos dados da platraforma thingspeak
-        fetch('http://localhost:3000/data')
-            .then(response => response.json())
-            .then(data => {
-                updateCharts(data);
-            })
-            .catch(error => console.error('Error fetching data:', error));
+
     };
 
     //intervalo entre as atualizações
@@ -72,13 +68,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 function sendSMS(){
+
     // implemente a lógica de envio de SMS aqui
     // aqui deve-se enviar uma requisição ao servidor avisando para enviar o sms
-    console.log("teste")
-    fetch('http://localhost:3000/sendSMS')
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
-            })
-            .catch(error => console.error('Error fetching data:', error));
+
 }
